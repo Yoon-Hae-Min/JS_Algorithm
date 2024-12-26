@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "create": "node scripts/create.js"
+  },
   "dependencies": {
     "fs": "^0.0.1-security"
   }
