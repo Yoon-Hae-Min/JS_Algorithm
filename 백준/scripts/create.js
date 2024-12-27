@@ -3,9 +3,9 @@ const path = require("path");
 const readline = require("readline");
 
 const BASE_CODE = `
+const filePath = process.platform === "linux" ? "/dev/stdin" : "../input.txt";
 let input = require("fs")
-  .readFileSync("./input.txt")
-  // 테스트 시 .readFileSync(0, "utf8") or .readFileSync("/dev/stdin")를 사용하세요
+  .readFileSync(filePath)
   .toString()
   .trim()
   .replaceAll("\\r", "")
